@@ -38,19 +38,11 @@ function App() {
 	return (
 		<div className="App">
 			<h1>COMP3120: Advanced Web Development</h1>
-			{genUnits(units)}
+			{units.map((unit) => {
+				return <Unit code={unit.code} title={unit.title} />;
+			})}
 		</div>
 	);
 }
-
-const genUnits = (arr) => {
-	let res = [];
-
-	arr.forEach(function (item) {
-		res.push(<Unit code={item.code} title={item.title} />);
-	});
-
-	return res;
-};
 
 export default App;
