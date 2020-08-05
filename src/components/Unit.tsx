@@ -19,12 +19,13 @@ class Unit extends Component<UnitProps, UnitState> {
 		let title = this.state ? this.state.title : "";
 
 		return (
-			<div>
+			<div className="unit">
 				<p>
 					{code}: {title}
 				</p>
 				<button onClick={this.toUpper}>Upper</button>
 				<button onClick={this.toLower}>Lower</button>
+				<button onClick={this.defaultCase}>Default</button>
 			</div>
 		);
 	}
@@ -35,6 +36,10 @@ class Unit extends Component<UnitProps, UnitState> {
 
 	toLower = () => {
 		this.setState({ title: this.state.title.toLowerCase() });
+	};
+
+	defaultCase = () => {
+		this.setState({ title: this.props.title });
 	};
 }
 

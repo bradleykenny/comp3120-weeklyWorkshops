@@ -36,7 +36,7 @@ function App() {
 	];
 
 	return (
-		<div className="App">
+		<div className="units">
 			<h1>COMP3120: Advanced Web Development</h1>
 			{units.map((unit) => {
 				return <Unit code={unit.code} title={unit.title} />;
